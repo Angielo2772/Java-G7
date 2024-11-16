@@ -27,8 +27,13 @@ public class EmpresaServiceImpl implements EmpresaService {
         BaseResponse<Empresa> baseResponse = new BaseResponse<>();
         boolean exist = empresaRepository.existsByNumeroDocumento(request.getNumeroDocumento());
         if(exist){
+<<<<<<< HEAD
             baseResponse.setCode(Constants.CODE_EMPRESA_NO_EXIST);
             baseResponse.setMessage(Constants.MSJ_EMPRESA_NO_EXIST);
+=======
+            baseResponse.setCode(Constants.CODE_EXIST);
+            baseResponse.setMessage(Constants.MSJ_EXIST);
+>>>>>>> upstream/master
             baseResponse.setObjeto(Optional.empty());
             return ResponseEntity.ofNullable(baseResponse);
 
